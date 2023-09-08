@@ -107,8 +107,9 @@ blockswap: "Blockswap RPC does not track any kind of user information at the bui
   quicknode:
     "Information about your computer hardware and software may be automatically collected by QuickNode. This information can include such details as your IP address, browser type, domain names, access times and referring website addresses.https://www.quicknode.com/privacy",
   chainstack:
-    "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/"
-
+    "We process certain personal data to provide you with the core functionality of our Services. Specifically, when you are: Using the Chainstack Console, we process your name, surname, email address (your account identifier), organization name, IP address, all HTTP headers (most importantly User-Agent), cookies; Using the Chainstack Blockchain infrastructure, we process nodes' token stored in Chainstack Vault, IP address and HTTP headers, request body, API token in Chainstack Vault.https://chainstack.com/privacy/",
+  shardeum:
+    "Shardeum follows a standard procedure of using log files. These files log visitors when they visit websites... The information collected by log files includes IP addresses, browser type, ISP, date and time stamp, referring/exit pages, and potentially the number of clicks.https://shardeum.org/privacy-policy/"
 };
 
 export const extraRpcs = {
@@ -1302,6 +1303,11 @@ export const extraRpcs = {
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
       },
+      {
+        url: "https://metis.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },
     ],
   },
   1246: {
@@ -1515,6 +1521,11 @@ export const extraRpcs = {
       "https://babel-api.mainnet.iotex.one",
       "https://pokt-api.iotex.io",
       "https://babel-api.fastblocks.io",
+      {
+        url: "https://iotex.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
+      },    
     ],
   },
   66: {
@@ -1524,6 +1535,11 @@ export const extraRpcs = {
         url: "https://oktc-mainnet.public.blastapi.io",
         tracking: "limited",
         trackingDetails: privacyStatement.blastapi,
+      },
+      {
+        url: "https://okt-chain.api.onfinality.io/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.onfinality,
       },
     ],
    
@@ -2797,6 +2813,16 @@ export const extraRpcs = {
         trackingDetails: privacyStatement.tenderly,
       },
       {
+        url: "https://sphinx.shardeum.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.shardeum,
+      },
+      {
+        url: "https://dapps.shardeum.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.shardeum,
+      },
+      {
       	url: "https://api.zan.top/node/v1/eth/sepolia/public",
       	tracking: "limited",
       	trackingDetails: privacyStatement.zan,
@@ -3284,6 +3310,24 @@ export const extraRpcs = {
       }
     ],
   },
+  8081: {
+    rpcs: [
+      {
+        url: "https://dapps.shardeum.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.shardeum,
+      }
+    ],
+  },
+  8082: {
+    rpcs: [
+      {
+        url: "https://sphinx.shardeum.org/",
+        tracking: "yes",
+        trackingDetails: privacyStatement.shardeum,
+      }
+    ],
+  },
   7895: {
     rpcs: [
       {
@@ -3305,7 +3349,9 @@ export const extraRpcs = {
   8131: {
     rpcs: ["https://testnet.meerlabs.com"]
   },
-
+  530: {
+    rpcs: ["https://fx-json-web3.portfolio-x.xyz:8545/"],
+  },
 };
 
 const allExtraRpcs = mergeDeep(llamaNodesRpcs, extraRpcs);
